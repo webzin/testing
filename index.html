@@ -28,8 +28,16 @@
         states[Connection.CELL_4G]  = 'Cell 4G connection';
         states[Connection.NONE]     = 'No network connection';
 
-        alert('Connection type: ' + states[networkState]);
-        navigator.app.exitApp();
+        /*alert('Connection type: ' + states[networkState]);
+		navigator.app.exitApp();*/
+		if (networkState == Connection.NONE){
+                alert('No Internet');
+				navigator.app.exitApp();
+
+    }else{
+
+                   alert('Internet Connection there');
+                }
     }
 
     </script>
